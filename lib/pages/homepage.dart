@@ -1,3 +1,5 @@
+import 'package:cupertino_telegram_clone/pages/chatpages.dart';
+import 'package:cupertino_telegram_clone/pages/newpage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +15,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
-          leading: Text('Edit'),
+          leading: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Edit',
+                style: TextStyle(color: CupertinoColors.activeBlue),
+              )),
           middle: Text('Chats'),
           trailing: Icon(CupertinoIcons.pen),
         ),
@@ -40,7 +47,19 @@ class BottomNav extends StatelessWidget {
             label: 'Setting', icon: Icon(CupertinoIcons.settings))
       ]),
       tabBuilder: (context, index) {
-        return Container();
+        switch (index) {
+          case 0:
+            return NewPage(title: 'Contact');
+          case 1:
+            return NewPage(title: 'Calls');
+          case 2:
+            return ChatPages();
+          case 3:
+            return NewPage(title: 'Setting');
+          default:
+            return ChatPages();
+        }
+        ;
       },
     );
   }
