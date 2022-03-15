@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
+    return const CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
           leading: Align(
               alignment: Alignment.centerLeft,

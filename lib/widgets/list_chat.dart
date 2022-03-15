@@ -16,6 +16,7 @@ class _ListChatState extends State<ListChat> {
   Widget build(BuildContext context) {
     return Material(
       child: ListView.builder(
+        shrinkWrap: true,
         itemCount: 15,
         itemBuilder: (context, index) => ListTile(
           leading: CircleAvatar(

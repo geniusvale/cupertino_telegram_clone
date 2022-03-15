@@ -10,8 +10,16 @@ class ChatPages extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
         child: SafeArea(
-            child: Center(
-      child: ListChat()
-    )));
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                CupertinoSearchTextField(
+                 prefixInsets: EdgeInsets.only(left: 140.0),
+                ),
+                ListChat()
+              ],
+            ),
+          ),
+        ));
   }
 }
