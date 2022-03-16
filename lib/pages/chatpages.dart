@@ -14,7 +14,7 @@ class ChatPages extends StatelessWidget {
             child: Column(
               children: [
                 CupertinoSearchTextField(
-                 prefixInsets: EdgeInsets.only(left: 140.0),
+                 prefixInsets: EdgeInsets.only(left: 150.0),
                 ),
                 ListChat()
               ],
